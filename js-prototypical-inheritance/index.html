@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prototypical inheritance</title>
+    <meta charset="utf-8">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Bitter:700);
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Raleway';
+      }
+      h1, h2, h3 {
+        font-family: 'Bitter';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .inverse {
+        background-color: #272822;
+        background-size: cover;
+        color: #d6d6d6;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+      }
+
+      .video-background {
+        background-size: 100% 100%;
+        image-rendering: optimizeSpeed;             /* Legal fallback */
+        image-rendering: -moz-crisp-edges;         /* Firefox */
+        image-rendering:   -o-crisp-edges;         /* Opera */
+        image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+        image-rendering: crisp-edges;
+        image-rendering:pixelated;                 /* CSS4 Proposed  */
+        -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+      }
+
+      .footnote {
+        font-size: 80%;
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+      }
+
+      a,
+      a:visited{
+        color: white;
+      }
+
+      a:hover {
+        color: #a3a3a3;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: video-background, center, middle, inverse
+background-image: url(../assets/lmg-small.gif)
+
+# Prototypical inheritance in JavaScript
+
+---
+class: center, middle, inverse
+
+# JavaScript is not Python
+### but you can do class-like stuff
+---
+class: middle
+
+```
+function Point (lat, lng) {
+  this.lat = lat
+  this.lng = lng
+}
+
+```
+add a function to this *thing*
+
+```
+Point.prototype.distance = function (lat, lng) {
+  var b
+  if (typeof lat == 'number' && typeof lng == 'number') {
+    b = new Point(lat, lng)
+  } else if (lat.constructor == Point) {
+    b = lat
+  } else {
+    throw Point.prototype.errors.invalid
+  }
+
+  var distlat = Math.abs(b.lat - this.lat)
+  var distlng = Math.abs(b.lng - this.lng)
+  return new Point(distlat, distlng)
+}
+
+Point.prototype.errors = {
+  invalid: new Error('Invalid distance argument')
+}
+```
+---
+class: middle
+## Let's try it out:
+```
+  var zakkendragershof = new Point(52.092911, 5.115336)
+  var vinkenburg = new Point(52.092024, 5.117546)
+
+  var zeroDist = zakkendragershof.distance(zakkendragershof)
+
+  var distanceZV = zakkendragershof.distance(vinkenburg)
+  var distanceVZ = vinkenburg.distance(zakkendragershof)
+
+  zakkendragershof.distance('henk')
+
+```
+---
+class: middle
+## All prototypes can be accessed:
+```
+  var zakkendragershof = {
+    lat: 52.092911,
+    lng: 5.115336
+  }
+  var vinkenburg = {
+    lat: 52.092024,
+    lng: 5.117546
+  }
+
+  // bind binds the first object as `this` as a new function
+  var dist = Point.prototype.distance.bind(
+    vinkenburg,
+    zakkendragershof.lat,
+    zakkendragershof.lng
+  )()
+
+  // this throws because zakkendragershof does not have Point as prototype
+  Point.prototype.distance.bind(vinkenburg, zakkendragershof)
+```
+---
+class: middle
+
+## `this` is not always your friend
+
+```
+function Inventory () {
+  this.pencils = []
+  this.pens = []
+
+  this.totalPencils = 0
+  this.totalPens = 0
+}
+
+// very bad example of sum function
+Inventory.prototype.countPens = function (inventoryItem) {
+  this[inventoryItem].forEach(function (thing) {
+    this.totalPens += thing
+  })
+  return this.totalPens
+}
+
+```
+---
+## `bind` your scope
+```
+var dist = Point.prototype.distance.bind(
+  vinkenburg,
+  zakkendragershof.lat,
+  zakkendragershof.lng
+)()
+
+Inventory.prototype.countPens = function (inventoryItem) {
+  this[inventoryItem].forEach(function (thing) {
+    this.totalPens += thing
+  }, this)
+  return this.totalPens
+}
+```
+---
+## `reduce` instead of `forEach`
+```
+Inventory.prototype.countPens = function (inventoryItem) {
+  this.totalPens = this[inventoryItem].reduce(function (prev, thisItem) {
+    return prev + thisItem
+  })
+  return this.totalPens
+}
+```
+---
+class: middle
+## Object.create instead of `new`
+```
+  var zakkendragershofCreate = Object.create(Point.prototype, {
+    lat: {
+      enumerable: true,
+      value: 52.092911
+    },
+    lng: {
+      enumerable: true,
+      value: 5.115336
+    }
+  })
+  var zakkendragershofNew = new Point(52.092911, 5.115336)
+```
+---
+class: middle
+## Object.create can hide variables
+```
+function Person (name) {
+  var person = Object.create({}, {
+    name: {
+      enumerable: true,
+      writable: true,
+      value: name
+    },
+    age: {
+      enumerable: false,
+      writable: false,
+      value: 43
+    }
+  })
+
+  var _socialSecurity = 12314
+  Object.defineProperty(person, 'socialsecurity', {
+    enumerable: true,
+    get: function () {
+      return _socialSecurity
+    },
+    set: function (value) {
+      _socialSecurity = parseInt(value)
+    }
+  })
+
+  return person
+}
+```
+---
+class: inverse, center, middle
+background-image: url(../assets/hopper.jpg)
+# Questions?
+
+<a href="mailto:fritz.vandeventer@nelen-schuurmans.nl"><i class="fa fa-envelope fa-4x"></i></a>
+          <a href="http://github.com/fritzvd"><i class="fa fa-github fa-4x"></i></a>
+          <a href="http://twitter.com/fritzvd"><i class="fa fa-twitter fa-4x"></i></a>
+          <a href="http://nl.linkedin.com/in/fritzvd"><i class="fa fa-linkedin fa-4x"></i></a>
+.footnote[Edward Hopper - Street Scene]
+    </textarea>
+    <script src="point.js"></script>
+    <script src="person.js"></script>
+    <script src="../remark.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        highlightLanguage: 'javascript',
+        highlightStyle: 'monokai',
+      });
+    </script>
+  </body>
+</html>

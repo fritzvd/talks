@@ -1,0 +1,14 @@
+{
+  "name": "js-prototypical-inheritance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "narray.js",
+  "scripts": {
+    "test": "tape tests.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.5.1"
+  }
+}

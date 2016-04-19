@@ -1,0 +1,26 @@
+{
+  "name": "open-data-estafette",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fritzvd/open-data-estafette",
+  "description": "presentatie bij rws voor @nens",
+  "main": "index.html",
+  "keywords": [
+    "opendata"
+  ],
+  "authors": [
+    "fritzvd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~2.6.1",
+    "d3": "~3.4.6"
+  }
+}

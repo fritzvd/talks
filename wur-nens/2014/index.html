@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>GIS @ Nelen & Schuurmans</title>
+    <meta name="description" content="Presentation about GIS at Nelen & Schuurmans">
+    <meta name="author" content="Fritz van Deventer">
+
+    <meta charset="utf8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/css/reveal.min.css">
+    <!-- <link rel="stylesheet" href="bower_components/leaflet-dist/leaflet.css"> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/lib/css/zenburn.css">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <style>
+    .gatsby {
+      /*background: url(assets/img/greatgatsby.gif);*/
+      width: 100%;
+      height: 620px;
+    }
+
+    .reveal i{
+    font-family: 'FontAwesome';
+    font-style: normal;
+    }
+    </style>
+
+    <!-- For syntax highlighting -->
+  </head>
+  <body>
+
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>GIS<h1><h1> @ </h1><h1><a href="http://nelen-schuurmans.nl" target="_blank">Nelen & Schuurmans</a></h1>
+      </section>
+
+        <section>
+          <h2>Fritz van Deventer</h2>
+          <p>i am fritz. i make things. mostly music (<a href="http://cheesesofmexico.com">@cheesesofmexico</a>) and computer stuff (<a href="https://github.com/fritzvd/">@fritzvd</a>) e.g. with javascript.
+          </p>
+        </section>
+
+<!--         <section>
+          <h3>MGI @ WUR</h3>
+        </section>
+
+        <section>
+          <h3>Web Developer / Geomatics @ Water Insight</h3>
+          <h5>Through Ate Poortinga</h5>
+        </section>
+
+        <section>
+          <h3>Geomatics Junior @ NEO</h3>
+          <h5>landed a job after an interview</h5>
+        </section> -->
+
+        <!--<section>-->
+          <!--<h3>Musician / IT guy @ Cheeses of Mexico</h3>-->
+          <!--<img src="assets/img/lmg-less.gif" />-->
+        <!--</section>-->
+
+        <!--<section>-->
+          <!--<h3>Software Developer @ Nelen Schuurmans</h3>-->
+           <!--<img src="assets/img/3di.gif" />-->
+        <!--</section>-->
+
+
+      <section>
+        <h3 class="headline-timeline">From MSc to Job in IT</h3>
+        <div id="job-in-it"></div>
+      </section>
+
+      <section>
+        <h3>Nelen & Schuurmans</h3>
+        <span>advisors, gis, it</span>
+        <div id="nens-composition">
+        </div>  
+      </section>
+
+      <section>
+        <h3>GIS at water consultancy?</h3>
+        <ul>
+          <li>Everything we do is spatial</li>
+          <li>Die-hard GIS ❰ ❱ Cloud solutions</li>
+          <li>NumPy / GDAL, PostGIS, Python, python python. Javascript. QGIS</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Why Geoscripting?</h3>
+        <ul>
+          <li class="fragment">Reproducable results</li>
+          <li class="fragment">Quick and dirty analysis</li>
+          <li class="fragment">Automation of all da tings</li>
+          <li class="fragment">We don't like RSI</li>
+          <li class="fragment">Fun.</li>
+
+        </ul>
+
+      </section>
+
+      <section>        
+        <h3> example time </h3>
+      </section>
+        <section>
+          <h3>Nationale Regen Radar (NRR)</h3>
+          <h5>national shower radar (NRR)</h5>
+          <img src='assets/img/nrr.gif' />
+        </section>
+        <section>
+          <h4>NRR</h4>
+          <ul>
+            <li class="fragment">Comparing cokriging, kriging and IDW</li>
+            <li class="fragment">in R in Python</li>
+            <li class="fragment">automated</li>
+            <li class="fragment"><a href="https://github.com/nens/openradar">open source</a></li>
+
+          </ul>
+          <pre class="fragment"><code>After trial and error part, getting good results etc. Implementing</code></pre>
+        </section>
+
+        <section>
+          <img src="assets/img/regenviewer.gif" />
+        </section>
+
+       <section>
+          <h3>3Di</h3>
+          <img src="assets/img/3di.gif" />
+        </section>
+
+        <section>
+          <h3>3Di</h3>
+          <ul>
+            <li>Flood simulation</li>
+            <li>10,000 times faster than SOBEK</li>
+            <li>Resolution is as good as the DEM</li>
+            <li>Bizar technical challenge</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What would you need?</h2>
+        </section>
+
+        <section>
+          <h3>Classic GIS</h3>
+          <ul>
+            <li>ArcGIS/QGIS R/Rstudio wha-evah</li>
+            <li>local / remote you are the artist</li>
+            <li>End product is 'static'</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>GIS at Nelen & Schuurmans</h3>
+          python, gdal, r, javascript, servers, wms etc.
+        </section>
+
+        <section>
+          <h3>Play with some data</h3>
+          <a href="http://fritzvd.com/turf-example">http://fritzvd.com/turf-example</a>
+        </section>
+
+    <section>
+      <h3>Final remarks</h3>
+        <pre class="fragment"><code>Learn some Python/JavaScript</code></pre>
+        <pre class="fragment"><code>Teach yourself about Databases</code></pre>
+        <pre class="fragment"><code>Try out Linux</code></pre>
+    </section>
+
+      <section>
+        <h3>Questions?</h3>
+        <p>
+          <a href="mailto:fritz.vandeventer@nelen-schuurmans.nl"><i class="fa fa-envelope fa-4x"></i></a>
+          <a href="http://github.com/fritzvd"><i class="fa fa-github fa-4x"></i></a>
+          <a href="http://twitter.com/fritzvd"><i class="fa fa-twitter fa-4x"></i></a>
+          <a href="http://nl.linkedin.com/in/fritzvd"><i class="fa fa-linkedin fa-4x"></i></a>
+        </p>
+        <p><a href="http://fritzvd.com/wur-nens/">http://fritzvd.com/wur-nens/</a></p>
+      </section>
+    </div>
+</div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/lib/js/head.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+    <!-- <script src="bower_components/leaflet-dist/leaflet.js"></script> -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!-- BEGIN TimelineJS -->
+    <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+    <script>
+        function timelineJS() {
+              var dataJob = {
+        "timeline":
+        {
+            "headline":"MSc to Job in IT",
+            "type":"default",
+            "text":"<p>quick overview</p>",
+            "asset": {
+                "media":"https://farm6.staticflickr.com/5215/5537244456_fa0026438d_z_d.jpg",
+                "credit":"",
+                "caption":""
+            },
+            "date": [
+                {
+                    "startDate":"2010,4,2",
+                    "endDate":"2011,1,31",
+                    "headline":"Freelance",
+                    "text":"<p>Some IT, some acting</p>",
+                    "asset": {
+                        "media":"https://farm3.staticflickr.com/2345/2093704252_68ebeee9e2_z_d.jpg?zz=1",
+                    }
+                },
+                {
+                    "startDate":"2011,1,31",
+                    "endDate":"2012,3,31",
+                    "headline":"Water Insight",
+                    "text":"<p>Web Development, Water Remote Sensing</p>",
+                    "asset": {
+                        "media":"http://www.nerpnorthern.edu.au/sites/default/files/styles/2col-keyimage/public/managed/projects/01_satellite_image_van_diemen_gulf.jpg?itok=l8a4V68_",
+                    }
+                },
+                {
+                    "startDate":"2012,4,1",
+                    "endDate":"2012,10,31",
+                    "headline":"NEO",
+                    "text":"<p>High Quality Satellite Imagery, orthorectifaction</p>",
+                    "asset": {
+                        "media":"http://www.pictometry.com/images/stories/oblique.jpg",
+                    }
+                },
+                {
+                    "startDate":"2012,11,1",
+                    "endDate":"2015,1,1",
+                    "headline":"Nelen & Schuurmans",
+                    "text":"<p>Software Developer, Geoinformatics</p>",
+                    "asset": {
+                        "media":"assets/img/nxt3.png",
+                    }
+                }
+            ],
+            "era": [
+                {
+                    "startDate":"2010,9,1",
+                    "endDate":"2012,11,1",
+                    "headline":"MSc GIS",
+                    "text":"<p>/p>",
+                }
+
+            ]
+        }
+    };
+            createStoryJS({
+                type:       'timeline',
+                width:      '800',
+                height:     '600',
+                source:     dataJob,
+                embed_id:   'job-in-it'
+            });
+    };
+
+      var dataset = {
+        composition: [30, 10, 10],
+      };
+
+      var width = 460,
+          height = 300,
+          radius = Math.min(width, height) / 2;
+
+      var color = d3.scale.category20();
+
+      var pie = d3.layout.pie()
+          .sort(null);
+
+      var arc = d3.svg.arc()
+          .innerRadius(radius - 100)
+          .outerRadius(radius - 50);
+
+      var svg = d3.select("#nens-composition").append("svg")
+          .attr("width", width)
+          .attr("height", height)
+          .append("g")
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+      var path = svg.selectAll("path")
+          .data(pie(dataset.composition))
+        .enter().append("path")
+          .attr("fill", function(d, i) { return color(i); })
+          .attr("d", arc);
+
+      // var map = L.map('map').setView([51.505, -4.09], 13);
+      // // add an OpenStreetMap tile layer
+      // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      //     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      // }).addTo(map);
+
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+          // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+          if (event.indexh == 5){ // assuming your 5th slide is the one with the map
+              // map.invalidateSize(false); // assuming that map holds the the reference to your leaflet instance
+              // console.log('mapping')
+          }
+          if (event.indexh == 2){ 
+              timelineJS();
+              setTimeout(Reveal.layout, 500)
+          }
+      } );
+
+    </script>
+  </body>
+</html>
