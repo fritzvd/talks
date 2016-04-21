@@ -2,7 +2,7 @@ function Person (name) {
   var person = Object.create({}, {
     name: {
       enumerable: true,
-      writable: true,
+      writable: false,
       value: name
     },
     age: {

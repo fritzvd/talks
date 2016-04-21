@@ -9,7 +9,7 @@ tape('Point should be able to calc distance', function (t) {
   t.plan(3)
 
   var zeroDist = zakkendragershof.distance(zakkendragershof)
-  t.deepEqual(zeroDist, {lat: 0.0, lng: 0.0})
+  t.deepEqual(zeroDist, 0)
 
   var distanceZV = zakkendragershof.distance(vinkenburg)
   var distanceVZ = vinkenburg.distance(zakkendragershof)
@@ -24,7 +24,7 @@ tape('Point should be able to calc distance', function (t) {
 })
 
 tape('Point.prototype.distance as static method', function (t) {
-  t.plan(2)
+  t.plan(1)
 
   var zakkendragershof = {
     lat: 52.092911,
@@ -41,13 +41,7 @@ tape('Point.prototype.distance as static method', function (t) {
     zakkendragershof.lat,
     zakkendragershof.lng
   )()
-  t.deepEqual(dist, {lat: 0.0008869999999987499, lng: 0.0022099999999998232})
-
-
-  t.throws(
-    Point.prototype.distance.bind(vinkenburg, zakkendragershof),
-    Point.prototype.errors.invalid
-  )
+  t.deepEqual(dist, 0.0008869999999987499)
 })
 
 tape('Point can be instantiated with Object.create', function (t) {
@@ -66,7 +60,7 @@ tape('Point can be instantiated with Object.create', function (t) {
 
   t.deepEqual(
     zakkendragershofCreate.distance(zakkendragershofNew),
-    {lat: 0, lng: 0}
+    0
   )
   t.deepEqual(zakkendragershofNew, zakkendragershofCreate)
 })
@@ -78,7 +72,7 @@ tape('Person has restrictions', function (t) {
   var p = new Person(name)
   p.name = 'piet'
   t.equals(p.name, name)
-  t.equals(Object.keys(p), ['name', 'socialsecurity'])
+  t.deepEquals(Object.keys(p), ['name', 'socialsecurity'])
 
   p.age = 100000
   t.equals(p.age, 43)

@@ -144,6 +144,31 @@ class: middle
 ---
 class: middle
 
+```
+var Point = require('./point')
+
+function Location (name, lat, lng) {
+  this.name = name
+  Point.call(this, lat, lng)
+}
+
+Location.prototype = Object.create(Point.prototype)
+
+module.exports = Location
+```
+---
+class: middle
+
+```
+var zakkendragershof = new Location('zakkendragershof', 52.092911, 5.115336)
+var vinkenburg = new Location('vinkenburg', 52.092024, 5.117546)
+
+var dist = zakkendragershof.distance(vinkenburg)
+
+```
+---
+class: middle
+
 ## `this` is not always your friend
 
 ```
@@ -250,6 +275,7 @@ background-image: url(../assets/hopper.jpg)
 .footnote[Edward Hopper - Street Scene]
     </textarea>
     <script src="point.js"></script>
+    <script src="location.js"></script>
     <script src="person.js"></script>
     <script src="../remark.min.js"></script>
     <script>
