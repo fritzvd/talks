@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>fritzvd - </title>
+    <meta charset="utf-8">
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+    <style>
+      @import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+      @import url(https://fonts.googleapis.com/css?family=Bitter:700);
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Raleway';
+      }
+      h1, h2, h3 {
+        font-family: 'Bitter';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .inverse {
+        background-color: #272822;
+        background-size: cover;
+        color: #d6d6d6;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+      }
+
+      .inverse ul {
+        list-style: none;
+      }
+
+      .inverse ul li {
+        background-color: rgba(0,0,0,0.6);
+        color: #fff;
+      }
+
+      .video-background {
+        background-size: 100% 100%;
+        image-rendering: optimizeSpeed;             /* Legal fallback */
+        image-rendering: -moz-crisp-edges;         /* Firefox */
+        image-rendering:   -o-crisp-edges;         /* Opera */
+        image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+        image-rendering: crisp-edges;
+        image-rendering:pixelated;                 /* CSS4 Proposed  */
+        -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+      }
+
+      .footnote {
+        font-size: 80%;
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+      }
+
+      a,
+      a:visited{
+        color: white;
+      }
+
+      a:hover {
+        color: #a3a3a3;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <script src="../remark.min.js"></script>
+    <script>
+
+      function renderSlides (response) {
+        var slideshow = remark.create({
+          highlightLanguage: 'javascript',
+          highlightStyle: 'tomorrow-night-eighties',
+        });
+      }
+
+      function formatResponse (response) {
+        return response.text()
+      }
+
+      function createTextarea (response) {
+        var ta = document.createElement('textarea')
+        ta.id = 'source'
+        ta.innerHTML = response
+        document.body.appendChild(ta)
+      }
+
+      fetch('./talk.md')
+        .then(formatResponse)
+        .then(createTextarea)
+        .then(renderSlides)
+    </script>
+  </body>
+</html>
