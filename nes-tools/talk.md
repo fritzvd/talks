@@ -1,26 +1,26 @@
 
 
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 background-image: url(../assets/nes/ruhr-0.png)
 ---
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 # Super MarioScript
 
 ### Tools and Tips for NES Development
 ---
 background-image: url(../assets/nes/curtains.png)
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 
 ### Fritz
 ### not a computer scientist
 ### does a lot of things
 ---
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 ### Constraints
 ### Doing new things
 ### demo
 ---
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 ## Fun facts
 * 1.79 MHz 6502-like CPU
 * 5.37 MHz PPU
@@ -34,103 +34,106 @@ class: video-background, center, middle, inverse
 
 ---
 background-image: url(../assets/nes/smb2-world-1.gif)
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 
 ---
 background-image: url(../assets/nes/smb2-4.png)
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 
 ---
-class: video-background, center, middle, inverse
+class: center, dark-letters
 background-image: url(../assets/nes/kirby.png)
-#  
-#  
-#  
+
 # Constraints rock
 
 ---
-class: video-background, center, middle, inverse
+class: center, middle, inverse
 background-image: url(../assets/nes/castlevania.png)
 
-# Beauftiful Constraints
+## Beauftiful Constraints
 
 #### twitter
 #### emoji
-#### Kirby's Adventure
+#### programming
 ---
-class: video-background, center, middle, inverse
-background-image: url(../assets/nes/starwars.jpg)
-# George Lucas
+class: middle,  inverse, dark-letters
+background-image: url(../assets/nes/smb-chr-bank.jpg)
+## smb
 
 ---
 background-image: url(../assets/nes/battletaodsdd2.png)
-class: video-background, center, middle, inverse
-# Everyday
+class: center, middle, inverse, dark-letters
+## Everyday
 
 #### browsers (i.e. IE)
 #### client
+.footnote[[check @amandaglosson's talk](https://www.youtube.com/watch?v=bKkYcetGWjA)]
 ---
-class: video-background, center, middle, inverse
+class: center, middle, inverse
+background-image: url(../assets/nes/star-versus.gif)
 # Doing new things
 
 ---
-class: video-background, center, middle, inverse
-# Surprises
+class: center, middle, inverse
+background-image: url(../assets/nes/metroid-brain.png)
+## Brains
+---
 
-### community
-### nice hacks (@partyhxlnt)
+class: center, middle, inverse, dark-letters
+background-image: url(../assets/nes/gyromite.png)
+## Not invented here (NIH)
 ---
-class: video-background, center, middle, inverse
-# Brains
+class: center, middle, inverse, green-letters
+background-image: url(../assets/nes/zelda-error.png)
+##  Remove Abstractions
+.footnote[[Scott Hanselman's post](http://www.hanselman.com/blog/PleaseLearnToThinkAboutAbstractions.aspx)]
 ---
-class: video-background, center, middle, inverse
-# Not invented here
+class: center, inverse, dark-letters
+background-image: url(../assets/nes/mm21.png)
+## open source is awesome
+
+```bash
+npm install nesly-assembler nesly-sound
+```
 ---
-class: video-background, center, middle, inverse
-#  Remove Abstractions
----
+class: center, middle, inverse, blue-letters
+background-image: url(../assets/nes/smb3.png)
 # DEMO
-Getting started with nes programming
-
-Learn 6502. syntax
-Follow tutorial
-Go get em in asm
-
-cc65 makes a bit easier because you can
-also write c
-Which is especially convenient for looping variable
-declaration etc.
-
-Still requires you to really know the device
-
-Let's compare some asm with js or c
 
 ---
-
-I started out writing nes-t m x.
-Parse the tmxfile. Output a C header.
-
-Little did I know.
-
+class: center, middle, inverse, not-pixelated, blue-letters
+background-image: url(../assets/nes/pallette.jpg)
 ---
-# the attribute table
+class: center, inverse, dark-letters
+background-image: url(../assets/nes/mrgimmick.png)
+# Backgrounds
 ---
-# Leveling Down
-Plumbing
-Baking bread
-Coding
-Coding for the NES
+class: center, inverse, dark-letters
+background-image: url(../assets/nes/layla.png)
+# Spriteswap
 ---
+class: center, middle, inverse, dark-letters
 # Takeaways
-Strong community draws people in.
-Lower barrier to entry
-Constraints force creativity
+
+#### c is not that hard
+#### Strong community draws people in.
+#### always Lower barrier to entry
+#### Constraints force creativity
+#### #nesdev has really cool people
+---
+class: center, middle, inverse, blue-letters
+## acknowledgements
+
+* shiru
+* bbbradsmith
+* doug fraker
+* @emkay Michael Matuzak
 ---
 class: inverse, center, middle
-background-image: url(../assets/smalls/hopper-gas.jpg)
-# Questions?
+background-image: url(../assets/nes/hopper-nes.jpg)
+# thank you
 
-<a href="mailto:fritz.vandeventer@nelen-schuurmans.nl"><i class="fa fa-envelope fa-4x"></i></a>
+<a href="mailto:fritzvd@gmail.com"><i class="fa fa-envelope fa-4x"></i></a>
           <a href="http://github.com/fritzvd"><i class="fa fa-github fa-4x"></i></a>
           <a href="http://twitter.com/fritzvd"><i class="fa fa-twitter fa-4x"></i></a>
           <a href="http://nl.linkedin.com/in/fritzvd"><i class="fa fa-linkedin fa-4x"></i></a>

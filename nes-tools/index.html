@@ -38,6 +38,32 @@
         color: #f3f3f3;
       }
 
+      .dark-letters h1,
+      .dark-letters h2,
+      .dark-letters h3,
+      .dark-letters h4 {
+        text-shadow: 5px 5px 0px #333;
+        color: #fff;
+        margin-top: 2em;
+      }
+
+      .green-letters h1,
+      .green-letters h2,
+      .green-letters h3,
+      .green-letters h4 {
+        text-shadow: 5px 5px 0px #000;
+        color: #1AEF55;
+        margin-top: 2em;
+      }
+
+      .blue-letters h1,
+      .blue-letters h2,
+      .blue-letters h3,
+      .blue-letters h4 {
+        text-shadow: 5px 5px 0px #000;
+        color: #618FFF;
+      }
+
       .inverse ul {
         list-style: none;
       }
@@ -46,6 +72,7 @@
         background-color: rgba(0,0,0,0.6);
         color: #fff;
       }
+
 
       .remark-slide-content {
         background-size: cover;
@@ -58,6 +85,10 @@
         -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
       }
 
+      .not-pixelated {
+        background-size: 100%;
+        image-rendering: optimizeQuality;
+      }
       .footnote {
         font-size: 80%;
         position: absolute;
