@@ -133,6 +133,10 @@ class: inverse, center, middle
 background-image: url(../assets/nes/hopper-nes.jpg)
 # thank you
 
+#### [getting started guide](http://blog.fritzvd.com/2016/06/13/Getting-started-with-NES-programming/)
+#### [nes-talk nes rom and repo](https://github.com/fritzvd/ruhr.nes)
+#### [nes-talk js live demo](https://github.com/fritzvd/ruhr.js)
+
 <a href="mailto:fritzvd@gmail.com"><i class="fa fa-envelope fa-4x"></i></a>
           <a href="http://github.com/fritzvd"><i class="fa fa-github fa-4x"></i></a>
           <a href="http://twitter.com/fritzvd"><i class="fa fa-twitter fa-4x"></i></a>
