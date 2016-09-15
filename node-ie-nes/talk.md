@@ -1,7 +1,7 @@
 
 
 class: center, middle, inverse
-background-image: url(../assets/nes/devjam.png)
+background-image: url(../assets/nes/node-ie.png)
 ---
 class: center, middle, inverse
 
