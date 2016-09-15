@@ -5,8 +5,14 @@ background-image: url(../assets/nes/node-ie.png)
 ---
 class: center, middle, inverse
 
-### #nesdev:
+#### #nesdev:
 ### Using the power of JavaScript
+---
+background-image: url(../assets/nes/athletic.png)
+class: center, middle, inverse
+
+## 've got 99 repos:
+### but I ain't finished none
 ---
 background-image: url(../assets/nes/curtains.png)
 class: center, middle, inverse
