@@ -5,8 +5,8 @@ background-image: url(../assets/nes/node-ie.png)
 ---
 class: center, middle, inverse
 
-#### #nesdev:
-### Using the power of JavaScript
+#### Programming the NES
+### with JS
 ---
 background-image: url(../assets/nes/athletic.png)
 class: center, middle, inverse
