@@ -260,8 +260,10 @@ class: inverse, center, middle
 # thank you
 
 #### [getting started guide](http://blog.fritzvd.com/2016/06/13/Getting-started-with-NES-programming/)
-#### ["powerpoint.nes" - will cleanup more](https://github.com/fritzvd/ruhr.nes)
+#### ["powerpoint.nes" - WIP](https://github.com/fritzvd/ruhr.nes)
 #### [nes-talk js live demo](https://github.com/fritzvd/ruhr.js)
+
+#### [Easy 6502 - 6502 asm tutorial](https://skilldrick.github.io/easy6502/)
 
 <a href="mailto:fritzvd@gmail.com"><i class="fa fa-envelope fa-4x"></i></a>
           <a href="http://github.com/fritzvd"><i class="fa fa-github fa-4x"></i></a>
