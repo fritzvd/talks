@@ -23,6 +23,9 @@ class: center, middle,
 ## ga naar https://codepen.io
 
 ???
+Probeer mij even na te doen en te typen.
+Open codepen. Dubbelklik op JS scherm.
+Volgende uittypen.
 
 var bakje
 
