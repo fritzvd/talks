@@ -14,7 +14,7 @@ class: middle
 ---
 class: center, middle,
 # computer aan?
-#### ga naar http://bit.ly/spelletjemaken
+#### ga naar http://bit.ly/spelletjestart
 #### downloaden
 #### rechtermuisknop &nbsp;&nbsp;&#866;&nbsp; uitpakken
 #### folder openen, rechtermuisknop index.html -> open met chrome
