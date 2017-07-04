@@ -283,7 +283,11 @@ class: inverse, middle, center
 # bedankt
 bekijk hier ook het eind resultaat:
 [code](https://github.com/fritzvd/talks/blob/gh-pages/spel-p5/spelletjemaken/sketch.js)
+
+
 [live demo](http://fritzvd.com/talks/spel-p5/spelletjemaken/)
+
+
 [alle bestanden](https://github.com/fritzvd/talks/raw/gh-pages/spel-p5/spelletjemaken/eindproduct.zip)
 ---
 class: inverse, middle, center
@@ -291,4 +295,6 @@ class: inverse, middle, center
 ## scores? een tweede 'paddle'?
 
 [text toevoegen](https://p5js.org/reference/#/p5/text)
+
+
 [andere p5 tutorials](https://p5js.org/tutorials/)
