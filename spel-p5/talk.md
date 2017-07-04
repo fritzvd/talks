@@ -14,7 +14,7 @@ class: middle
 ---
 class: center, middle,
 # computer aan?
-#### ga naar http://bit.ly/spelletjestart
+#### ga naar http://bit.ly/spelstart
 #### downloaden
 #### rechtermuisknop &nbsp;&nbsp;&#866;&nbsp; uitpakken
 #### folder openen, rechtermuisknop index.html -> open met chrome
@@ -291,3 +291,4 @@ class: inverse, middle, center
 ## scores? een tweede 'paddle'?
 
 [text toevoegen](https://p5js.org/reference/#/p5/text)
+[andere p5 tutorials](https://p5js.org/tutorials/)
