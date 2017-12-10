@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>reflective practicioner</title>
+    <meta charset="utf-8">
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+    <link href="//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic" rel="stylesheet">
+    <!-- <link href="//fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet"> -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,700,400italic" rel="stylesheet"> -->
+    <style>
+      /*@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);*/
+      /*@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);*/
+
+      .charts {
+        margin-left: -0%;
+      }
+      body {
+        font-family: Helvetica, sans-serif;
+
+        font-family: 'Ubuntu Mono';
+      }
+      /*h1, h2, h3, h4 {
+        text-transform: uppercase;
+        font-family: 'pressstart';
+        font-weight: normal;
+      }*/
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono', Andale Mono, monospace; }
+
+      .remark-slide-content {
+        background-color: #F7DE1F;
+        color: black;
+      }
+
+      .inverse {
+        background-color: black;
+        background-size: cover;
+        color: #F7DE1F;
+        /*text-shadow: 0 0 20px #333;*/
+      }
+      .inverse h1, .inverse h2, .inverse h3 {
+        color: #F7DE1F;
+      }
+
+      .dark-letters h1,
+      .dark-letters h2,
+      .dark-letters h3,
+      .dark-letters h4 {
+        text-shadow: 5px 5px 0px #333;
+        color: #fff;
+        margin-top: 2em;
+      }
+
+      .green-letters h1,
+      .green-letters h2,
+      .green-letters h3,
+      .green-letters h4 {
+        text-shadow: 5px 5px 0px #000;
+        color: #1AEF55;
+        margin-top: 2em;
+      }
+
+      .blue-letters h1,
+      .blue-letters h2,
+      .blue-letters h3,
+      .blue-letters h4 {
+        text-shadow: 5px 5px 0px #000;
+        color: #618FFF;
+      }
+
+      .inverse ul {
+        list-style: none;
+      }
+
+      .inverse ul li {
+        background-color: rgba(0,0,0,0.6);
+        color: #fff;
+      }
+
+
+      .remark-slide-content {
+        background-size: cover;
+        image-rendering: optimizeSpeed;             /* Legal fallback */
+        image-rendering: -moz-crisp-edges;         /* Firefox */
+        image-rendering:   -o-crisp-edges;         /* Opera */
+        image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+        image-rendering: crisp-edges;
+        image-rendering:pixelated;                 /* CSS4 Proposed  */
+        -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+      }
+
+      .not-pixelated {
+        background-size: 100%;
+        image-rendering: optimizeQuality;
+      }
+      .footnote {
+        font-size: 80%;
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+      }
+
+      iframe {
+        width: 100%;
+        height: 25em;
+      }
+
+      li {
+        padding: 5px;
+      }
+
+      a,
+      a:visited{
+        color: white;
+      }
+
+      a:hover {
+        color: #a3a3a3;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script> -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../remark-latest.min.js"></script>
+    <script type="text/javascript" src="./charts.js"></script>
+
+    <script>
+
+      function renderSlides (response) {
+        var slideshow = remark.create({
+          highlightLanguage: 'javascript',
+          highlightStyle: 'tomorrow-night-eighties',
+        });
+      }
+
+      function formatResponse (response) {
+        return response.text()
+      }
+
+      function createTextarea (response) {
+        var ta = document.createElement('textarea')
+        ta.id = 'source'
+        ta.innerHTML = response
+        document.body.appendChild(ta)
+      }
+
+      fetch('./talk.md')
+        .then(formatResponse)
+        .then(createTextarea)
+        .then(renderSlides)
+
+    </script>
+
+  </body>
+</html>
