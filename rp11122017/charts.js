@@ -1,28 +1,4 @@
-    
-    function loadChart () {
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work',     11],
-            ['Eat',      2],
-            ['Commute',  2],
-            ['Watch TV', 2],
-            ['Sleep',    7]
-          ]);
-
-          var options = {
-            title: 'My Daily Activities'
-          };
-
-          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-          chart.draw(data, options);
-      }
-    }
-function loadCollegeChart() {///
+function loadCollegeChart() {
   google.charts.load('current', {packages: ['corechart', 'bar']});
   google.charts.setOnLoadCallback(collegeChart);
 
@@ -30,7 +6,7 @@ function loadCollegeChart() {///
         var data = google.visualization.arrayToDataTable([
           ['Thema', 'Docenten', 'Studenten'],
           ['Zinnig', 100, 92.6],
-          ['Mis veel', 90, 43.1],
+          ['Veel inhalen als men college mist', 90, 43.1],
           ['Leert klassikaal veel', 94.4, 73.7],
           ['Schrijft mee', 30, 46],
           ['Leert van opdrachten', 100, 89.7]
@@ -59,7 +35,7 @@ function loadCollegeChart() {///
       }
 }
 
-function loadTempoChart() {///
+function loadTempoChart() {
   
 google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(tempoChart);
@@ -68,7 +44,8 @@ function tempoChart() {
       var data = google.visualization.arrayToDataTable([
         ['Thema', 'Docenten', 'Studenten'],
         ['Te Snel', 60, 40],
-        ['Te langzaam', 61, 43.1]
+        ['Te langzaam', 0, 43.1],
+        ['Gas terug nemen', 40, 0],
       ]);
 
       var options = {
